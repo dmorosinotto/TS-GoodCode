@@ -13,4 +13,4 @@ TypeScript advanced types pattern - [slides and sample](slides) of my session [X
     -   Conditional types (predefined built-in 2.8+)
 -   Simulate Nominal types (DTDD)
     -   class private, brands, intersect, generics
--   [References](slides/19-Reference.md)
+-   [References](slides/20-Reference.md)
