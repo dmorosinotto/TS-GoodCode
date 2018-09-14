@@ -1,9 +1,8 @@
 # TS-GoodCode
 
-TypeScript advanced types pattern - [slides and sample](slides) for my session [XE-GoodCode](https://www.xedotnet.org/eventi/one-day-good-code/) + some [extra](extra).
+TypeScript advanced types pattern - [slides and sample](slides) of my session [XE-GoodCode](https://www.xedotnet.org/eventi/one-day-good-code/) + some [extra](extra).
 
-###Agenda
-_TypeScript type-system_
+### Agenda: TypeScript type-system
 
 -   Basic types Annotation as “set”
 -   Structural typed and type Compatibility

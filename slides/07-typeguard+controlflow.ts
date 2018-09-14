@@ -1,5 +1,3 @@
-export {};
-
 interface Bird {
     fly(): void;
     layEggs(): number;
@@ -18,7 +16,7 @@ function isBird(pet: Bird | Fish): pet is Bird {
 //CONTROL FLOW ANALYSIS
 function move(pet: Bird | Fish) {
     var n = pet.layEggs(); //ALWAYS CALLABLE (common in Bird|Fish)
-    if (!isBird(pet)) {
+    if (isBird(pet)) {
         pet.fly(); //OK HERE pet IS INFERRED Bird
     } else {
         pet.swim(); //OK HERE pet IS INFERRED Fish

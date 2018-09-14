@@ -21,7 +21,7 @@ class CNamed {
 
 class CPerson {
     constructor(public name: string, public age: number) {}
-    //TRY DECCOMENT
+    //TRY COMMENT
     //hi() { console.log(this.name, this.age) }
 }
 
@@ -54,8 +54,8 @@ var pn: CPerson = CN;
 var pn: CPerson = IA; //ERROR: differnt age type!
 var pn: CPerson = ALICE;
 
-//CLASS COMPATIBILITY: non importa "il tipo esatto" basta che corrisponda INTERFACCIA PUBBLICA
-//ammeno che non ci sia di mezzo membri PRIVATI --> allora devono condividere Classe Base (stesso private)
+//CLASS COMPATIBILITY: normally can be different class (with no inheritance) but with SAME "PUBBLIC INTERFACE"
+//but if there is a PRIVATE FIELD -> then need to share same private origin baseclass --> REQUIRE INHERITANCE!
 class C1 {
     feet!: number;
     constructor(name: string, numFeet: number) {}
@@ -82,21 +82,21 @@ class C2Ext extends C2 {
 let c1: C1;
 let c2 = new C2(123);
 
-c1 = c2; //OK stessa forma (pubblica)
-c2 = c1; //ERROR: private non assegnabile!
-c2 = new C2Priv(1); //ERROR: stessa forma e private MA NON HANNO LA STESSA base class
-c2 = new C2Ext(456); //OK assegnabile perchè private comune (subtype/extend deriva implica stesso private)
+c1 = c2; //OK same shape (public interface)
+c2 = c1; //ERROR: private field not exist in C1!
+c2 = new C2Priv(1); //ERROR: even if has same shape and private C2Priv DON'T SHARE ORIGIN -> NO BASE CLASS!
+c2 = new C2Ext(456); //OK assignable becouse share common private origin (subtype C2Ext extend C2 --> SAME PRIVATE FIELD!)
 
-//TYPE COMPABILITY nelle FUNCITONS (CONTROLLA PARAMETRI)
+//TYPE COMPABILITY in FUNCITONS (CHECK PARAMETER LIST)
 let fx = (a: number) => 0;
-let fy = (b: number, s: string) => 0; //provare con s?:string rende compatible anche fx=fy OK
+let fy = (b: number, s: string) => 0; //try use s?:string it enable compatibilty fx=fy OK
 
-fy = fx; // OK ignora extra parametri (s:string) che non sarebbe usato quando chiamo fx invocando fy(123,"ignore me")
-fx = fy; // ERRORE perchè fy ha più parametri required (s:string) quindi quando chiamo fx(456) non riuscirei a passare "string"
+fy = fx; // OK ignore extra params (s:string) that will not be used when invoke using fy(123,"ignore me") -> fx(123)
+fx = fy; // ERROR becouse fy has more required parameters (s:string) so calling fx(456) I can't pass additional "string"
 
-//TYPE COMPABILITY nelle FUNCTION (CONTROLLA RETURN)
+//TYPE COMPABILITY in FUNCTION (CHECK RETURN TYPE COMPATIBILITY (same shape))
 let rx = () => ({ name: "Alice" });
 let ry = () => ({ name: "Alice", location: "Seattle" });
 
-rx = ry; // OK ry ritorna subtype (ossia estende tipo base di rx)
-ry = rx; // ERRORE perchè il tipo di ritorno di rx manca della proprietà location obbligatoria
+rx = ry; // OK ry returns subtype (it has compatible shape with rx)
+ry = rx; // ERROR becouse return type rx don't hase required location property

@@ -1,5 +1,5 @@
 export {};
-//USO :never al posto di :void --> PHANTHOM TYPE https://medium.com/@dhruvrajvanshi/advanced-typescript-patterns-6cf8826c7944
+//USE :never instead of :void --> PHANTHOM TYPE https://medium.com/@dhruvrajvanshi/advanced-typescript-patterns-6cf8826c7944
 interface USD {
     __brandUSD: never;
     value: number;
@@ -20,4 +20,4 @@ function gross(net: USD, tax: USD) {
 gross(usd, usd); // ok
 gross(eur, usd); // Error: Property '__brandUSD' is missing in type 'EUR'.
 
-//APPROCCIO USATO ANKE DA TEAM TYPESCRIPT: https://github.com/Microsoft/TypeScript/blob/7b48a182c05ea4dea81bab73ecbbe9e013a79e99/src/compiler/types.ts#L693-L698
+//SAME APPROACH USED BY TYPESCRIPT TEAM: https://github.com/Microsoft/TypeScript/blob/7b48a182c05ea4dea81bab73ecbbe9e013a79e99/src/compiler/types.ts#L693-L698

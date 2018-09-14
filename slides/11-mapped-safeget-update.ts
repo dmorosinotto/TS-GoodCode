@@ -37,3 +37,4 @@ update(dto, { addr: [1, 2, 3], flag: false }); //OK
 update(dto, { addr: [4, 5, 6], flag: "true" }); //ERROR flag not boolean
 update(dto, { id: "789-0" }); //ERROR id not type string
 update(dto, { missing: true }); //ERROR missing not valid
+update({ a: 1, b: false, c: "ciao" }, { a: 2, b: "true" });
