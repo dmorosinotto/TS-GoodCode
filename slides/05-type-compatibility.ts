@@ -103,4 +103,4 @@ let rx = () => ({ name: "Alice" });
 let ry = () => ({ name: "Alice", location: "Seattle" });
 
 rx = ry; // OK ry returns subtype (it has compatible shape with rx)
-ry = rx; // ERROR becouse return type rx don't hase required location property
+ry = rx; // ERROR becouse return type rx don't has required location property

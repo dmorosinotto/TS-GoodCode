@@ -32,7 +32,7 @@ NEVER = (function() {
 })();
 LITERAL = Math.random() > 0.5 ? 1 : "a";
 
-let x: never; //TRY TO CHANGE THE TYPE TO SEE WHAT HEPPENS ;-)
+let x: never; //TRY TO CHANGE THE TYPE TO SEE WHAT HAPPENS ;-)
 //let x: undefined | void | null | boolean | number | string | T | object | any | unknown | never;
 //ASSIGNABLE FROM
 x = UNDEFINED;

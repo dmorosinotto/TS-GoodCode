@@ -4,11 +4,12 @@ type JSONify<T> = JSONvalue<T extends { toJSON(): infer U } ? U : T>
 
 type JSONvalue<T> = 
     T extends boolean|number|string|null ? T :
-    T extends Function ? undefined :
+    T extends Function ? never : //FUNCTIONS ARE REMOVED!
     T extends object ? { [P in keyof T]: JSONify<T[P]> } 
     : undefined;
 
-function deepCopy<T>(obj: T): JSONify<T> {
+//function deepCopy<T>(obj: T): T { //WRONG SIGNATURE!
+function deepCopy<T>(obj: T): JSONify<T> { //CORRECT!
     return JSON.parse(JSON.stringify(obj));
 }
 
