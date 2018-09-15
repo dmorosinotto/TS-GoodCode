@@ -13,8 +13,8 @@ class EUR {
 const usd = new USD(10);
 const eur = new EUR(10);
 
-function gross(net: USD, tax: USD) {
-    return { value: net.value + tax.value } as USD;
+function gross(net: USD, tax: USD): USD {
+    return new USD(net.value + tax.value);
 }
 
 gross(usd, usd); // ok

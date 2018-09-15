@@ -24,6 +24,13 @@ var rb = safeGet(dto, "flag", false); //true
 var rc = safeGet(dto, "addr", ["world"]); //["world"]
 var rc = safeGet(dto, "xxx", 1); //INVALID prop
 var rc = safeGet(dto, "addr", 123); //INVALID default type
+var rc = safeGet({a: 1, b: "ciao"}, "c", 2);
+//
+//
+//
+//
+//
+//
 
 type Partial<T> = { [P in keyof T]?: T[P] }; //Make all properties in T optional
 

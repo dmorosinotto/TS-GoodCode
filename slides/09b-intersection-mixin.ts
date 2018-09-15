@@ -1,9 +1,10 @@
 export {};
 
-var r = mixin({ n: 123 }, { s: "hello" });
+var r = mixin({ n: 123, b:true }, { s: "hello" });
 r.n.toFixed(2);
 r.s.substr(3);
-console.log(r); // {a: 123 , b: "hello"}
+r.b
+console.log(r); // {n: 123 , b: true, s: "hello"}
 
 function mixin<A extends object, B extends object>(a: A, b: B): A & B {
     var ret2 = Object.assign({}, a, b);

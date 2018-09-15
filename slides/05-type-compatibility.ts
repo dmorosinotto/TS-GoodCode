@@ -32,6 +32,10 @@ const JOHN = new CPerson("John", 42);
 const ALICE = { name: "Alice", location: "Seattle" };
 //INFER TYPE {name: string, location: string}
 
+// TYPE COMPATIBILITY --> STRUCTURAL TYPE = MATCH "SHAPE"
+// SHAPE = public* required property + methods signature
+// SPECIAL CASE: class (*private) must share origin="INHERITED"
+
 //ALL VALID BECOUSE SHAPE CNamed = {name: string}
 //NO NEED TO EXPLICIT IMPLEMENT INTERFACE OR SHARE BASE CLASS (INHERITS)
 //IN A NOMINAL TYPE-SYSTEM (C# or Java) THEY ARE ALL ERRORS!

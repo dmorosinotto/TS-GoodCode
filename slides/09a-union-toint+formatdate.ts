@@ -14,7 +14,15 @@ toInt(-67); //-67
 toInt("8.90"); //8
 toInt([0]); //ALWAYS ERROR
 
-function formatDate(date: string | Date, format?: string): string {
+//
+//
+//
+//
+//
+//
+//
+
+ function formatDate(date: string | Date, format?: string): string {
     //TRY ADD AND HANDLE | number
     if (typeof date === "string") {
         date = new Date(date);
