@@ -1,6 +1,6 @@
 # TS-GoodCode
 
-TypeScript advanced types pattern - [slides and sample](slides) of my session [XE-GoodCode](https://www.xedotnet.org/eventi/one-day-good-code/) + some [extra](extra).
+TypeScript from 0 to hero - [slides and sample](slides) of my session [FEVR](https://www.fevr.it/eventi/2020/04/typescript-from-0-to-hero/)
 
 ### Agenda: TypeScript type-system
 
@@ -13,4 +13,4 @@ TypeScript advanced types pattern - [slides and sample](slides) of my session [X
     -   Conditional types (predefined built-in 2.8+)
 -   Simulate Nominal types (DTDD)
     -   class private, brands, intersect, generics
--   [References](slides/20-Reference.md)
+-   [References](slides/19-Reference.md)

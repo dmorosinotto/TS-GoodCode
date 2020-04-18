@@ -1,23 +1,25 @@
 {
-    "name": "TS-GoodCode",
-    "version": "1.0.0",
-    "description": "TypeScript advanced types pattern for my Session XE-GoodCode",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dmorosinotto/TS-GoodCode.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/dmorosinotto/TS-GoodCode/issues"
-    },
-    "homepage": "https://github.com/dmorosinotto/TS-GoodCode#readme",
-    "dependencies": {
-        "typescript": "^3.0.3"
-    }
+	"name": "fevr_ts",
+	"version": "1.0.0",
+	"description": "TypeScript from 0 to hero",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dmorosinotto/TS-GoodCode/tree/FEVR"
+	},
+	"keywords": [
+		"TypeScript"
+	],
+	"author": "Daniele Morosinotto (d.morosinotto@icloud.com)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/dmorosinotto/TS-GoodCode.git/issues"
+	},
+	"homepage": "https://github.com/dmorosinotto/TS-GoodCode/blob/FEVR/README.md",
+	"devDependencies": {
+		"typescript": "^3.8.3"
+	}
 }
