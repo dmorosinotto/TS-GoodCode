@@ -1,9 +1,12 @@
+//BASIC STRING TEMPLATE LITERAL
 type Who = "world" | "Daniele";
 type Greeting = `hello ${Who}`;
 
+//SAMPLE USING as FOR REMAPPED KEY TO BUILD NEW MAPPED TYPE
 type Getter<T> = {
 	[K in keyof T as `get${Uppercase<K & string>}`]: () => T[K];
 };
+
 const PRODUCT = {
 	sku: "P123-456",
 	price: 78.9,

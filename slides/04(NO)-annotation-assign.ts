@@ -27,8 +27,8 @@ OBJECT = OBJ;
 T = OBJ;
 ANY = {};
 UNKNOWN = {} || undefined || null;
-NEVER = (function() {
-    for (;;) throw "NEVER RETURN or ALWAYS THROW";
+NEVER = (function () {
+	for (;;) throw "NEVER RETURN or ALWAYS THROW";
 })();
 LITERAL = Math.random() > 0.5 ? 1 : "a";
 
